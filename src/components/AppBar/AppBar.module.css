@@ -1,0 +1,12 @@
+.AppBar__container {
+  display: flex;
+  justify-content: space-around;
+  background-color: bisque;
+  padding: 10px 0px;
+}
+
+.logo {
+  width: 120px;
+  border-radius: 60px;
+  background-color: #ffffff;
+}
