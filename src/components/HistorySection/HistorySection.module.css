@@ -1,0 +1,98 @@
+.container {
+  height: 100%;
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.history__table {
+  border: hidden;
+  width: 340px;
+  border-spacing: 0px;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.column__image {
+  padding: 0px;
+}
+.column__emoji {
+  padding: 0px;
+}
+
+.table__row {
+  padding: 0px;
+}
+
+.table__column {
+  padding: 0;
+  width: 60px;
+  text-align: center;
+}
+
+.table__column__date {
+  width: 100px;
+  padding: 0;
+}
+
+.column__emoji {
+  font-size: 36px;
+  padding: 0;
+}
+
+.table__row:nth-child(odd) {
+  background-color: rgb(204, 204, 204);
+}
+
+.notification {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.notification > img {
+  width: 200px;
+}
+
+.history__data {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.history__button {
+  display: inline-block;
+  border-radius: 30px;
+  border: none;
+  background-color: rgb(132, 132, 192);
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: 700;
+  transition: all ease 500ms;
+}
+
+.history__button:hover {
+  background-color: rgb(93, 93, 196);
+  color: #fff;
+  font-weight: 500;
+  box-shadow: 4px 4px 8px 0px rgba(54, 66, 75, 0.32);
+}
+
+.history {
+  position: relative;
+  overflow: hidden;
+  max-height: 395px;
+  margin-bottom: 20px;
+}
+
+.history__all {
+  max-height: 100%;
+}
+
+.table__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

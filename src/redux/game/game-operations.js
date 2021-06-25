@@ -1,4 +1,5 @@
 import actions from "./game-actions";
+import { v4 as uuidv4 } from "uuid";
 
 const { userСhoice, updateHistory, resetHistory } = actions;
 
@@ -29,7 +30,9 @@ const playGame = (userMove) => async (dispatch) => {
   const browserMove = chooseMove();
   const result = defineGameResult(userMove, browserMove);
   dispatch(userСhoice(result));
-  dispatch(updateHistory({ userMove, browserMove, result }));
+  const date = Date.now();
+  const id = uuidv4();
+  dispatch(updateHistory({ id, date, userMove, browserMove, result }));
 };
 
 const clearHistory = () => async (dispatch) => {

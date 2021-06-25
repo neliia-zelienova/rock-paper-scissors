@@ -1,11 +1,51 @@
 .container {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 56px;
-  height: 100px;
+  height: 100%;
+  margin-bottom: 40px;
 }
 
 .initial__text {
-  font-size: 15px;
+  opacity: 100;
+  font-size: 24px;
+  animation-duration: 5s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transition: all ease 500ms;
+}
+
+.dibable {
+  opacity: 0;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 60%;
+    width: 100%;
+  }
+
+  to {
+    margin-left: 30%;
+    width: 100%;
+  }
+}
+
+.emoji__container {
+  position: absolute;
+  left: calc(50% - width);
+  bottom: 70%;
+  opacity: 101;
+  transition: all ease 500ms;
+}
+
+.emoji__hidden {
+  opacity: 0;
+}
+
+.image {
+  width: 200px;
 }

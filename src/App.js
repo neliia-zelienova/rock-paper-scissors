@@ -7,11 +7,13 @@ import FootBar from "../src/components/FootBar";
 
 function App() {
   return (
-    <div className="App-container">
+    <div className="App-wrapper">
       <AppBar />
-      <ResultsSection />
-      <PlaySection />
-      <HistorySection />
+      <div className="game-container">
+        <ResultsSection />
+        <PlaySection />
+        <HistorySection />
+      </div>
       <FootBar />
     </div>
   );

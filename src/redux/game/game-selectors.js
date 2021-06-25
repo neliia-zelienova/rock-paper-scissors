@@ -23,9 +23,9 @@ const getStatistics = createSelector([getHistory], (history) => {
         break;
     }
   });
-  if (wins > 0) wins = Math.round((wins / history.length) * 100);
-  if (draws > 0) draws = Math.round((draws / history.length) * 100);
-  if (lost > 0) lost = Math.round((lost / history.length) * 100);
+  if (wins > 0) wins = (wins / history.length) * 100;
+  if (draws > 0) draws = (draws / history.length) * 100;
+  if (lost > 0) lost = (lost / history.length) * 100;
   return { wins, draws, lost };
 });
 

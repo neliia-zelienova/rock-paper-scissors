@@ -1,15 +1,12 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback } from "react";
 import { useDispatch } from "react-redux";
 
 import { gameOperations } from "../../redux/game";
 
-const PlaySection = () => {
-  const [move, setMove] = useState(-1);
+import styles from "./PlaySection.module.css";
 
+const PlaySection = () => {
   const handleClick = (e) => {
-    console.log("setMove", e.target.dataset.value);
-    setMove(Number(e.target.dataset.value));
-    console.log("sendMove", move);
     sendMove(Number(e.target.dataset.value));
   };
 
@@ -20,20 +17,32 @@ const PlaySection = () => {
   );
 
   return (
-    <div>
-      <p>
+    <div className={styles.container}>
+      <p className={styles.rules}>
         Choose Rock Paper or Scissors. Browser will make its choise
         simultaneously.
       </p>
-      <ul>
-        <li data-value="0" onClick={handleClick}>
-          Rock
+      <ul className={styles.choose__container}>
+        <li className={styles.move__container}>
+          <button
+            data-value="0"
+            onClick={handleClick}
+            className={[styles.move__button, styles.rock__move].join(" ")}
+          ></button>
         </li>
-        <li data-value="1" onClick={handleClick}>
-          Paper
+        <li className={styles.move__container}>
+          <button
+            data-value="1"
+            onClick={handleClick}
+            className={[styles.move__button, styles.paper__move].join(" ")}
+          ></button>
         </li>
-        <li data-value="2" onClick={handleClick}>
-          Scissors
+        <li className={styles.move__container}>
+          <button
+            data-value="2"
+            onClick={handleClick}
+            className={[styles.move__button, styles.scissors__move].join(" ")}
+          ></button>
         </li>
       </ul>
     </div>
