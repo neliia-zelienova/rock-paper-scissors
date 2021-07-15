@@ -1,0 +1,21 @@
+.game__item {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.game__img {
+  width: 90px;
+  height: 90px;
+  cursor: pointer;
+  border: none;
+  transition: filter ease-out 500ms, transform ease-out 500ms;
+  @media screen and (min-width: 768px) {
+    width: 100px;
+    height: 100px;
+  }
+}
+.game__img:hover {
+  transform: scale(1.3, 1.3);
+  filter: drop-shadow(1px 1px 0 rgba(0, 0, 0, 0.5))
+    drop-shadow(-1px -1px 0 rgba(0, 0, 0, 0.5));
+}

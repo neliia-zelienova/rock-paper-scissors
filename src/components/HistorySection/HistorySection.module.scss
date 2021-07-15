@@ -1,0 +1,69 @@
+.container {
+  height: 200px;
+  overflow-y: scroll;
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 50px;
+}
+
+.history__table {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 20px;
+  width: 300px;
+  border: hidden;
+  border-spacing: 0px;
+  font-size: 18px;
+  border-collapse: collapse;
+
+  @media screen and (min-width: 768px) {
+    width: 340px;
+  }
+
+  & th,
+  td {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+  }
+}
+
+.column__round {
+  padding: 0px;
+}
+
+.column__image {
+  padding: 0px;
+  & img {
+    width: 50px;
+    margin: 0 auto;
+  }
+}
+
+.column__message {
+  padding: 0px;
+}
+
+.table__row {
+  padding: 0px;
+}
+
+.table__column {
+  padding: 0;
+  width: 60px;
+  text-align: center;
+}
+
+.table__column__date {
+  width: 20px;
+  padding: 0;
+}
+
+.column__result {
+  font-size: 18px;
+  padding: 0;
+}
+
+.history__data {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}

@@ -1,39 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
-
-.App {
-  text-align: center;
-  font-family: "Shadows Into Light", cursive;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .App-wrapper {
-  font-family: "Shadows Into Light", cursive;
-  width: 1024px;
-  margin-right: auto;
-  margin-left: auto;
-  /* background-image: url(./components/AppBar/images/rock_paper_scissors_playing_rope.png);
-  background-size: 200px 200px;
-  background-position: left 0px top 95px;
-  background-repeat: no-repeat; */
+  font-family: 'Shadows Into Light', cursive;
 }
 
 ul {
@@ -42,5 +8,5 @@ ul {
 }
 
 button {
-  font-family: "Shadows Into Light", cursive;
+  font-family: 'Shadows Into Light', cursive;
 }

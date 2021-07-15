@@ -1,23 +1,37 @@
-import React from "react";
+import React from 'react';
 
-import styles from "./FootBar.module.css";
+import styles from './FootBar.module.scss';
+import Container from '../Container';
+import { Link } from 'react-router-dom';
+import routes from '../../routes';
 
 const Footbar = () => {
   return (
-    <div className={styles.container}>
-      <a
-        title="LinkedIn"
-        target="blank"
-        href="https://www.linkedin.com/in/neliia-zelienova/"
-        className={[styles.link, styles.linkedin].join(" ")}
-      ></a>
-      <a
-        title="GitHub"
-        target="blank"
-        href="https://github.com/neliia-zelienova"
-        className={[styles.link, styles.github].join(" ")}
-      ></a>
-    </div>
+    <Container>
+      <div className={styles.container}>
+        <div className={styles.home__link}>
+          <Link to={routes.home}>Home</Link>
+        </div>
+        <div className={styles.social__networks}>
+          <a
+            href="https://www.linkedin.com/in/neliia-zelienova/"
+            title="LinkedIn"
+            target="blank"
+            className={styles.linkedin}
+          >
+            {' '}
+          </a>
+          <a
+            title="GitHub"
+            target="blank"
+            href="https://github.com/neliia-zelienova"
+            className={styles.github}
+          >
+            {' '}
+          </a>
+        </div>
+      </div>
+    </Container>
   );
 };
 

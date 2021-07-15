@@ -1,21 +1,20 @@
-import "./App.css";
-import AppBar from "../src/components/AppBar";
-import ResultsSection from "../src/components/ResultsSection";
-import PlaySection from "../src/components/PlaySection";
-import HistorySection from "../src/components/HistorySection";
-import FootBar from "../src/components/FootBar";
+import './App.css';
+import { Route, Switch } from 'react-router-dom';
+import routes from './routes';
+import HomePage from './views/HomeView';
+import RandomView from './views/RandomView';
+import FootBar from './components/FootBar';
 
 function App() {
   return (
-    <div className="App-wrapper">
-      <AppBar />
-      <div className="game-container">
-        <ResultsSection />
-        <PlaySection />
-        <HistorySection />
-      </div>
+    <>
+      <Switch>
+        <Route exact path={routes.home} component={HomePage} />
+        <Route exact path={routes.random} component={RandomView} />
+        {/* <Route component={NotFoundPage} /> */}
+      </Switch>
       <FootBar />
-    </div>
+    </>
   );
 }
 
