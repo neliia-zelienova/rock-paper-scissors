@@ -3,10 +3,11 @@
   align-items: center;
   position: fixed;
   bottom: 2%;
-  left: 10%;
-  width: 270px;
-  justify-content: space-between;
+  left: 5%;
+  width: 290px;
+
   @media screen and (min-width: 768px) {
+    justify-content: space-between;
     bottom: 5%;
     left: 10%;
   }
@@ -43,6 +44,7 @@
 
   @media screen and (min-width: 768px) {
     flex-direction: row;
+    height: 100%;
     width: 80px;
   }
 }
@@ -53,7 +55,7 @@
   font-size: 36px;
   text-decoration: none;
   cursor: pointer;
-  margin-right: 50px;
+  margin-right: 10px;
   color: white;
   font-weight: 600;
 
