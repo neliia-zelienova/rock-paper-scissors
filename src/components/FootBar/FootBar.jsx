@@ -9,9 +9,6 @@ const Footbar = () => {
   return (
     <Container>
       <div className={styles.container}>
-        <div className={styles.home__link}>
-          <Link to={routes.home}>Home</Link>
-        </div>
         <div className={styles.social__networks}>
           <a
             href="https://www.linkedin.com/in/neliia-zelienova/"
@@ -29,6 +26,11 @@ const Footbar = () => {
           >
             {' '}
           </a>
+        </div>
+        <div className={styles.home__link}>
+          <Link to={routes.home}>
+            <span className={styles.home__text}>Home</span>
+          </Link>
         </div>
       </div>
     </Container>

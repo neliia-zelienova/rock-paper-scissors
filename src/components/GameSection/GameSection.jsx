@@ -116,9 +116,16 @@ const GameSection = ({
       </div>
       <p className={styles.message}>{message}</p>
       {gameResult >= 0 && (
-        <div className={styles.button__wrapper}>
-          <button onClick={toggleModal}>Show Results</button>
-        </div>
+        <>
+          <div className={styles.button__wrapper}>
+            <button onClick={toggleModal} className={styles.modal__button}>
+              Show Results
+            </button>
+            <button onClick={() => endGame()} className={styles.repeat__button}>
+              <span className={styles.button__text}>Play Again</span>
+            </button>
+          </div>
+        </>
       )}
       {showModal && (
         <Modal onClose={toggleModal}>

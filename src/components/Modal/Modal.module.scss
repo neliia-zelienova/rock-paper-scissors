@@ -18,7 +18,7 @@
   );
   position: absolute;
   top: 70px;
-  height: 70%;
+  min-height: 70%;
   width: 100%;
   // padding: 15px;
   background-color: #fff;
@@ -36,8 +36,8 @@
   }
 
   @media screen and (min-width: 1200px) {
-    max-width: 900px;
-    height: 561px;
+    max-width: 750px;
+    height: 550px;
   }
 }
 

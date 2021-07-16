@@ -1,13 +1,16 @@
 .container {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   position: fixed;
   bottom: 2%;
   left: 5%;
   width: 290px;
 
   @media screen and (min-width: 768px) {
-    justify-content: space-between;
+    align-items: flex-start;
+    justify-content: flex-start;
     bottom: 5%;
     left: 10%;
   }
@@ -17,7 +20,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: flex-start;
   height: 70px;
+  margin-bottom: 20px;
 
   & a {
     display: inline-block;
@@ -43,39 +48,58 @@
   }
 
   @media screen and (min-width: 768px) {
-    flex-direction: row;
-    height: 100%;
-    width: 80px;
   }
 }
 
 .home__link {
   display: inline-block;
   position: relative;
-  font-size: 36px;
-  text-decoration: none;
   cursor: pointer;
-  margin-right: 10px;
   color: white;
-  font-weight: 600;
+  margin-bottom: 20px;
+  background: url(../../images/home.svg) 0% 0%/100% no-repeat;
+  transition: filter ease 500ms;
 
-  &::after {
-    content: ' ';
-    display: inline-block;
-    height: 2px;
-    width: 100%;
-    background-color: #fff;
-    position: absolute;
-    border-radius: 2px;
-    bottom: 0;
-    left: 0;
-    transition: all ease 500ms;
+  &:focus,
+  :hover {
+    @media screen and (max-width: 767px) {
+      filter: drop-shadow(1px 1px 0 black) drop-shadow(-1px -1px 0 black);
+    }
   }
 
-  &:hover,
-  :focus {
+  @media screen and (min-width: 768px) {
+    margin-right: 10px;
+    margin-bottom: 0px;
+    background-image: none;
+  }
+}
+
+.home__text {
+  opacity: 0;
+  @media screen and (min-width: 768px) {
+    font-size: 36px;
+    font-weight: 600;
+    opacity: 1;
+    background-image: none;
+
     &::after {
-      transform: scale(0.5, 1);
+      content: ' ';
+      display: inline-block;
+      height: 2px;
+      width: 100%;
+      background-color: #fff;
+      position: absolute;
+      border-radius: 2px;
+      bottom: 0;
+      left: 0;
+      transition: all ease 500ms;
+    }
+
+    &:hover,
+    :focus {
+      &::after {
+        transform: scale(0.5, 1);
+      }
     }
   }
 }

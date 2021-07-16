@@ -4,21 +4,19 @@
 body {
   margin: 0;
   font-family: 'Shadows Into Light', cursive;
-
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.66;
   letter-spacing: 0.04em;
   user-select: none;
-
   margin: 0;
-  background: #f1f2f7;
+  background: rgb(74, 77, 180);
   background: linear-gradient(
     90deg,
-    rgba(66, 58, 180, 1) 0%,
-    rgba(29, 253, 141, 1) 50%,
-    rgba(102, 152, 35, 1) 100%
+    rgba(74, 77, 180, 1) 0%,
+    rgba(5, 219, 142, 0.8715846994535519) 39%,
+    rgba(36, 212, 247, 1) 100%
   );
 }
 
@@ -38,16 +36,10 @@ body {
 ::-webkit-scrollbar-thumb {
   -webkit-border-radius: 10px;
   border-radius: 10px;
-  background: linear-gradient(
-    180deg,
-    rgba(66, 58, 180, 1) 0%,
-    rgba(29, 253, 141, 1) 50%,
-    rgba(102, 152, 35, 1) 100%
-  );
-  -webkit-box-shadow: inset 0 0 6px rgba(31, 187, 70, 0.527);
+  background: rgb(74, 77, 180);
+  -webkit-box-shadow: inset 0 0 6px rgba(74, 77, 180, 0.5);
 }
 
-/* цей блок під питанням, воно підтягується з нормалайза */
 html {
   box-sizing: border-box;
 }
