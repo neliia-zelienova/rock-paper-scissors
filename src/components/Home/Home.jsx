@@ -1,11 +1,19 @@
 import React from 'react';
-import styles from './HomePage.module.scss';
+import styles from './Home.module.scss';
 import { Link } from 'react-router-dom';
 import routes from '../../routes';
+import rock from './../../images/game/purple_rock.png';
+import paper from './../../images/game/sheet_of_paper.png';
+import scissors from './../../images/game/scissors.png';
 
-const HomePage = () => {
+const Home = () => {
   return (
     <div className={styles.container}>
+      <div className={styles.logo}>
+        <img src={rock} alt="" />
+        <img src={paper} alt="" />
+        <img src={scissors} alt="" />
+      </div>
       <h1 className={styles.gameName}>Rock Paper Scissors</h1>
       <div className={styles.buttonContainer}>
         <Link className={styles.friend__btn} to={'/'}>
@@ -20,4 +28,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default Home;

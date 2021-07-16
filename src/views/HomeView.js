@@ -1,10 +1,10 @@
 import Container from '../components/Container';
-import HomePage from '../components/HomePage';
+import Home from '../components/Home';
 
 const HomeView = () => {
   return (
     <Container>
-      <HomePage />
+      <Home />
     </Container>
   );
 };
